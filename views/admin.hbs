@@ -1,0 +1,22 @@
+<body>
+    <div id="adminBody">
+        <div id="adminPage">
+            <h1>Here's a list of our users: </h1>
+            <h5>--- Click on their name to see their profile! ---</h5>
+            <br/>
+            {{#each users}}
+            {{#if Deleted}}
+            {{else}}
+            <ul>
+                <li>
+                    <a href="/users/admin/editUser/{{UserId}}">
+                        <h4>{{FirstName}} {{LastName}}</h4>
+                    </a>
+                </li>
+                <br />
+            </ul>
+            {{/if}}
+            {{/each}}
+        </div>
+    </div>
+</body>

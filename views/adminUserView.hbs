@@ -1,0 +1,14 @@
+<body>
+    <div id='adminUserViewBody'>
+        <div id='adminUserViewPage'>
+            <h1>Welcome!</h1>
+            <br />
+            <h3>Name: {{user.FirstName}} {{user.LastName}}</h3>
+            <br />
+            <h4>UserName: {{user.Username}}</h4>
+            <form method="POST" action='/users/admin/editUser/{{user.UserId}}' name='edit' id='edit'>
+                <button type='submit'>Delete User!</button>
+            </form>
+        </div>
+    </div>
+</body>

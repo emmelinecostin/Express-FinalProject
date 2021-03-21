@@ -1,0 +1,36 @@
+<body>
+    <div>
+    <h1>Create a Post!</h1>
+    <form method='POST' action='/posts/createPosts' name='createPosts' id='createPosts'>
+        <div>
+            <label for='createPosts'>Title: </label>
+            <input type='text' name='title' />
+        </div>
+        <br />
+        <div>
+            <label for='createPosts'>Body: </label>
+            <input type='text' name='body' />
+        </div>
+        <br />
+        <button type="submit">Submit your post!</button>
+    </form>
+    </div>
+    <hr />
+    <div id='postList'>
+        <h3>Here's a list of your posts: </h3>
+        {{#each postData}}
+        <ul>
+            <li>
+                <div>Title: {{PostTitle}}</div>
+                <br />
+                <div>Body: {{PostBody}}</div>
+                <a href='/posts/edit/{{PostId}}'> <button type='submit'>Edit</button> </a>
+                <br />
+                <form method="POST" action='/posts/delete/{{PostId}}' name='edit' id='edit'>
+                    <button type='submit'>Delete</button>
+                </form>
+            </li>
+        </ul>
+        {{/each}}
+    </div>
+</body>

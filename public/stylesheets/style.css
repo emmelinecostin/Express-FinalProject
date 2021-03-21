@@ -1,0 +1,108 @@
+body {
+  padding: 50px;
+  font-family: "Work Sans", sans-serif;
+  background-color: rgb(234, 240, 241);
+}
+
+a {
+  color: #353738;
+}
+
+.active {
+  color: white; 
+  padding: 20px; 
+  text-decoration: none; 
+}
+
+.topnav {
+  text-align: center;
+  background-color: rgb(36, 37, 34);
+  padding: 20px
+
+}
+
+#signupPage {
+  padding: 50px;
+}
+
+#signup {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: double black;
+}
+
+#loginPage {
+  padding: 80px;
+}
+
+#login {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: double black;
+}
+
+#createPosts {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: double black;
+}
+
+#postList {
+  padding: 50px;
+}
+
+#editPage {
+  padding: 80px;
+}
+
+#editPost {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: double black;
+}
+
+#profileBody {
+  padding: 40px;
+}
+
+#profilepage {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: dotted black;
+}
+
+#adminBody {
+  padding: 40px;
+}
+
+#adminPage {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: double black;
+}
+
+#adminUserViewBody {
+  padding: 40px;
+}
+
+#adminUserViewPage {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: dotted black;
+}
+
+button {
+  color: white;
+  background-color: black;
+  padding: 8px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}

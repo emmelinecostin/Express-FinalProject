@@ -1,0 +1,103 @@
+{
+    "tables": {
+        "posts": {
+            "tableName": "posts",
+            "schema": {
+                "PostId": {
+                    "autoIncrement": true,
+                    "primaryKey": true,
+                    "allowNull": false,
+                    "field": "PostId",
+                    "seqType": "Sequelize.INTEGER"
+                },
+                "PostTitle": {
+                    "field": "PostTitle",
+                    "seqType": "Sequelize.STRING"
+                },
+                "PostBody": {
+                    "field": "PostBody",
+                    "seqType": "Sequelize.STRING"
+                },
+                "UserId": {
+                    "references": {
+                        "model": "users",
+                        "key": "UserId"
+                    },
+                    "field": "UserId",
+                    "allowNull": true,
+                    "onDelete": "CASCADE",
+                    "onUpdate": "CASCADE",
+                    "seqType": "Sequelize.INTEGER"
+                },
+                "createdAt": {
+                    "field": "createdAt",
+                    "seqType": "Sequelize.DATEONLY"
+                },
+                "updatedAt": {
+                    "field": "updatedAt",
+                    "seqType": "Sequelize.DATEONLY"
+                },
+                "Deleted": {
+                    "defalutValue": false,
+                    "field": "Deleted",
+                    "seqType": "Sequelize.BOOLEAN"
+                }
+            },
+            "indexes": []
+        },
+        "users": {
+            "tableName": "users",
+            "schema": {
+                "UserId": {
+                    "autoIncrement": true,
+                    "primaryKey": true,
+                    "allowNull": false,
+                    "field": "UserId",
+                    "seqType": "Sequelize.INTEGER"
+                },
+                "FirstName": {
+                    "field": "FirstName",
+                    "seqType": "Sequelize.STRING"
+                },
+                "LastName": {
+                    "field": "LastName",
+                    "seqType": "Sequelize.STRING"
+                },
+                "Username": {
+                    "unique": true,
+                    "field": "Username",
+                    "seqType": "Sequelize.STRING"
+                },
+                "Password": {
+                    "field": "Password",
+                    "seqType": "Sequelize.STRING"
+                },
+                "Email": {
+                    "unique": true,
+                    "field": "Email",
+                    "seqType": "Sequelize.STRING"
+                },
+                "Admin": {
+                    "default": false,
+                    "field": "Admin",
+                    "seqType": "Sequelize.BOOLEAN"
+                },
+                "createdAt": {
+                    "field": "createdAt",
+                    "seqType": "Sequelize.DATEONLY"
+                },
+                "updatedAt": {
+                    "field": "updatedAt",
+                    "seqType": "Sequelize.DATEONLY"
+                },
+                "Deleted": {
+                    "defalutValue": false,
+                    "field": "Deleted",
+                    "seqType": "Sequelize.BOOLEAN"
+                }
+            },
+            "indexes": []
+        }
+    },
+    "revision": 1
+}

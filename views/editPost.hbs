@@ -1,0 +1,20 @@
+<body>
+    <div id='editPage'>
+        <form method='POST' action='/posts/edit/{{postData.PostId}}' name='editPost' id='editPost'>
+            <h1>Edit your Post!</h1>
+            <hr/>
+            <br />
+            <div>
+                <label for='editPost'>Title: </label>
+                <input type='text' name='title' placeholder="{{postData.PostTitle}}" />
+            </div>
+            <br />
+            <div>
+                <label for='editPost'>Body: </label>
+                <input type='text' name='body' placeholder="{{postData.PostBody}}" />
+            </div>
+            <br />
+            <button type="submit">Update Post!</button>
+        </form>
+    </div>
+</body>
